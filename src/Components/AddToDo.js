@@ -18,7 +18,7 @@ export const AddToDo = ({addTodo}) => {
 
   return (
     <div className='container my-3'>
-      <h3>Add an Item</h3>
+      <h3>Add an Item :-</h3>
       <form onSubmit={submit}>
         <div className='mb-3'>
           <label htmlFor='title' className='form-label'>
