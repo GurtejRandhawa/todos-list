@@ -1,9 +1,9 @@
-import Header from './MyComponents/Header';
-import Todos from './MyComponents/Todos';
-import Footer from './MyComponents/Footer';
+import Header from './Components/Header';
+import Todos from './Components/Todos';
+import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
-import { AddToDo } from './MyComponents/AddToDo';
-import About from './MyComponents/About';
+import { AddToDo } from './Components/AddToDo';
+import About from './Components/About';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
