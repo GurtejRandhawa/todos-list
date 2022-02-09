@@ -30,13 +30,14 @@ function App() {
       sno = 0;
     } else {
       sno = todosArray[todosArray.length - 1].sno + 1;
-    }
+    }    
     const myTodo = {
       sno: sno,
       title: title,
       desc: desc,
+      date: new Date().toLocaleString() + '',
     };
-    setTodosArray([...todosArray, myTodo]);
+    setTodosArray([myTodo,...todosArray]);
     console.log(myTodo);
   };
 
