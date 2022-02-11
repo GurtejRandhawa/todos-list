@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 export default function header(props) {
   return (
-    <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+    <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
       <div className='container-fluid'>
-        <Link className='navbar-brand' to='/'>
+        {/* <Link className='navbar-brand' to='/'>
           {props.title}
-        </Link>
+        </Link> */}
         <button
           className='navbar-toggler'
           type='button'
@@ -33,17 +33,25 @@ export default function header(props) {
               </Link>
             </li>
           </ul>
-          {props.searchBar?<form className='d-flex'>
-            <input
-              className='form-control me-2'
-              type='search'
-              placeholder='Search'
-              aria-label='Search'
-            />
-            <button className='btn btn-outline-success' type='submit'>
-              Search
-            </button>
-          </form>:''}
+          {!props.searchBar ? (
+            <form className='d-flex'>
+              {/* <input
+                className='form-control me-2'
+                type='search'
+                placeholder='Search'
+                aria-label='Search'
+              />
+              <button className='btn btn-outline-success' type='submit'>
+                Search
+              </button> */}
+              <p className='me-3 my-1'>
+                “Sometimes our stop-doing list needs to be bigger than our to-do
+                list.”
+              </p>
+            </form>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     </nav>

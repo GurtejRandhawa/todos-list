@@ -49,7 +49,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header title='My To-Do list' searchBar={false} />
+        <Header title='To-Do list' searchBar={false} />
         <Routes>
           <Route
             exact

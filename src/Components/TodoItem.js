@@ -1,12 +1,20 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
+import '../index.css'
 
 export default function TodoItem(props) {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <>
-      <Card style={{ margin: '10px auto', borderWidth: '2px' }}>
+      <Card
+        className='card mask-custom'
+        style={{
+          margin: '30px auto',
+          fontFamily: 'cursive',
+          width: '48%',
+        }}
+      >
         <Card.Body>
           <div className='form-check'>
             <input
@@ -18,16 +26,24 @@ export default function TodoItem(props) {
               }}
               style={{ backgroundColor: isChecked ? 'green' : '' }}
             />
-            <Card.Title>
-              {!isChecked ? props.todo.title : <del>{props.todo.title}</del>}
+            <Card.Title
+              style={{ fontSize: '20px', fontWeight: 'bold', color: '#00e6e6' }}
+            >
+              {!isChecked ? (
+                props.todo.title
+              ) : (
+                <del style={{ color: 'black' }}>{props.todo.title}</del>
+              )}
             </Card.Title>
-            <Card.Text>
-              {!isChecked ? props.todo.desc : <del>{props.todo.desc}</del>}
+            <Card.Text style={{ fontSize: '17px', color: '#ffff1a' }}>
+              {!isChecked ? (
+                props.todo.desc
+              ) : (
+                <del style={{ color: 'black' }}>{props.todo.desc}</del>
+              )}
             </Card.Text>
-
             <button
               style={{
-                //marginLeft: '95%',
                 visibility: isChecked ? 'visible' : 'hidden',
               }}
               className='btn btn-sm btn-danger'
@@ -35,7 +51,9 @@ export default function TodoItem(props) {
             >
               Delete
             </button>
-            <text style={{marginLeft:'83%'}}>{props.todo.date}</text>
+            <text style={{ marginLeft: '60%', color: '#00e6e6' }}>
+              {props.todo.date}
+            </text>
           </div>
         </Card.Body>
       </Card>
