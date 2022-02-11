@@ -4,7 +4,7 @@ export default function Footer() {
 
   return (
     <footer className='bg-dark text-light py-1' >
-      <p className='text-center'>Copyright &copy; MyTodoList.com</p>
+      <p className='text-center'>Copyright &copy; GurtejRandhawa</p>
     </footer>
   );
 }
