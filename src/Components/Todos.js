@@ -3,7 +3,7 @@ import TodoItem from './TodoItem';
 
 export default function Todos(props) {
   let myStyle = {
-    minHeight: '70vh',
+    minHeight: '35.7vh',
     margin: '80px auto',
   };
   return (
