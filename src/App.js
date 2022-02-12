@@ -37,7 +37,7 @@ function App() {
       desc: desc,
       date: new Date().toLocaleString() + '',
     };
-    setTodosArray([myTodo,...todosArray]);
+    setTodosArray([...todosArray,myTodo]);
     console.log(myTodo);
   };
 
